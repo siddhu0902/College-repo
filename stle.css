@@ -1,0 +1,43 @@
+/* body{
+    background-color:black;
+}
+h1{
+    color: aliceblue;
+}
+p{
+    color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: aqua;
+    font-size: 17px;
+} */
+ /* h1{
+    border-top: dotted;
+    border-bottom-style: dotted;
+    border-left-style: double;
+    border-left-width: 10px;
+    border-left-color: silver;
+ }
+ p{
+    border-style: outset;
+    border-width: 5px;
+    border-color: gold;
+    border-radius: 10px;
+    padding: 5px;
+ } */
+
+#box1{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: greenyellow;
+}
+#box2{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background:dodgerblue;
+}

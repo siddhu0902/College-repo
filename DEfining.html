@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frame Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .menu {
+            width: 220px;
+            background: #f0f0f0;
+            padding: 15px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="menu">
+        <h3>Menu</h3>
+
+        <p>
+            <a href="Solar_system.html" target="right_frame">
+                Solar System
+            </a><br>
+            Overview of planets
+        </p>
+
+        <p>
+            <a href="framecontent2.html" target="right_frame">
+                Link 2
+            </a><br>
+            Packer schedule
+        </p>
+
+        <p>
+            <a href="framecontent3.html" target="right_frame">
+                Link 3
+            </a><br>
+            Web resume
+        </p>
+
+        <p>
+            <a href="frameintro.html" target="right_frame">
+                Return to Original
+            </a>
+        </p>
+    </div>
+    <div class="content">
+        <iframe name="right_frame" src="frameintro.html"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>

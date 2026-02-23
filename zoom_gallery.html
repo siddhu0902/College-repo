@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomable Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .zoomed {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            z-index: 1000;
+            cursor: default;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            display: none;
+        }
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zoomable Image Gallery</h1>
+    <p>Click on any image to zoom in. Press Escape to return to normal.</p>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/200x150/FF0000/FFFFFF?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/200x150/00FF00/FFFFFF?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/200x150/0000FF/FFFFFF?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/200x150/FFFF00/FFFFFF?text=Image+4" alt="Image 4">
+        <img src="https://via.placeholder.com/200x150/FF00FF/FFFFFF?text=Image+5" alt="Image 5">
+        <img src="https://via.placeholder.com/200x150/00FFFF/FFFFFF?text=Image+6" alt="Image 6">
+    </div>
+    <div class="overlay"></div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        const overlay = document.querySelector('.overlay');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.add('zoomed');
+                overlay.classList.add('active');
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const zoomedImg = document.querySelector('.zoomed');
+                if (zoomedImg) {
+                    zoomedImg.classList.remove('zoomed');
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+
+        overlay.addEventListener('click', () => {
+            const zoomedImg = document.querySelector('.zoomed');
+            if (zoomedImg) {
+                zoomedImg.classList.remove('zoomed');
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
