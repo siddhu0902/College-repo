@@ -1,0 +1,92 @@
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#222;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:120px;
+background:url("restaurant.jpg");
+color:white;
+}
+
+.btn{
+background:red;
+padding:10px 20px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.about{
+padding:40px;
+text-align:center;
+}
+
+.menu{
+padding:40px;
+}
+
+.menu h2{
+color:#c0392b;
+}
+
+.menu ul{
+list-style:none;
+}
+
+.menu li{
+padding:8px;
+font-size:18px;
+}
+
+.billing{
+padding:40px;
+text-align:center;
+}
+
+form{
+max-width:400px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:8px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+background:#27ae60;
+color:white;
+padding:10px;
+border:none;
+width:100%;
+font-size:16px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:50px;
+}

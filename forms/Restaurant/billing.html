@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Order - Royal Spice</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Royal Spice Restaurant</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="billing.html">Order Online</a>
+</nav>
+</header>
+
+<section class="billing">
+
+<h2>Online Order Billing</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Phone</label>
+<input type="text" required>
+
+<label>Select Item</label>
+<select id="item">
+<option value="350">Butter Chicken</option>
+<option value="280">Paneer Tikka</option>
+<option value="300">Biryani</option>
+<option value="250">Pizza</option>
+<option value="270">Pasta</option>
+</select>
+
+<label>Quantity</label>
+<input type="number" id="qty">
+
+<button type="button" onclick="calculate()">Generate Bill</button>
+
+<h3>Total Price: ₹ <span id="total">0</span></h3>
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 Royal Spice Restaurant</p>
+</footer>
+
+</body>
+</html>

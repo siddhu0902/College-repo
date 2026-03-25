@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Loop Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x = 1;
+        document.write("Entering the loop<br>");
+
+        while (x < 20) {
+            if (x == 5) {
+                break;            // stop when x reaches 5
+            }
+            document.write("x = " + x + "<br>");
+            x = x + 1;
+        }
+
+        document.write("Exited the loop at x = " + x + "<br>");
+        document.write("Done");
+    </script>
+</body>
+</html>
